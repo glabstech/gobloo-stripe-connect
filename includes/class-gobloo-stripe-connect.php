@@ -27,6 +27,8 @@
  * @subpackage Gobloo_Stripe_Connect/includes
  * @author     William Donayre Jr <wdonayredroid+gobloo@gmail.com>
  */
+
+
 class Gobloo_Stripe_Connect {
 
 	/**
@@ -121,6 +123,11 @@ class Gobloo_Stripe_Connect {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-gobloo-stripe-connect-public.php';
+
+		/**
+		 * The class responsible for defining custom fields
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom-fields/custom-fields.php';
 
 		$this->loader = new Gobloo_Stripe_Connect_Loader();
 

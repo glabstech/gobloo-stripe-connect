@@ -2,3 +2,19 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+
+ /*
+    WIDTH HELPERS
+ */
+
+ .admin-width-50p{
+     width:50% !important;
+ }
+
+
+ /*
+    COMMON
+ */
+ .flex-unset{
+    flex:unset !important;    
+ }

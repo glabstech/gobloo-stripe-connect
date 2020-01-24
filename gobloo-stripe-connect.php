@@ -25,6 +25,9 @@
  * Domain Path:       /languages
  */
 
+
+require __DIR__ . '/vendor/autoload.php';
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
