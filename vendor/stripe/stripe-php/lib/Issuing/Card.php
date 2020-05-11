@@ -7,7 +7,7 @@ namespace Stripe\Issuing;
  *
  * @property string $id
  * @property string $object
- * @property mixed $authorization_controls
+ * @property \Stripe\StripeObject $authorization_controls
  * @property string $brand
  * @property \Stripe\Issuing\Cardholder|null $cardholder
  * @property int $created
@@ -18,10 +18,10 @@ namespace Stripe\Issuing;
  * @property bool $livemode
  * @property \Stripe\StripeObject $metadata
  * @property string $name
- * @property mixed|null $pin
+ * @property \Stripe\StripeObject|null $pin
  * @property string|null $replacement_for
  * @property string|null $replacement_reason
- * @property mixed|null $shipping
+ * @property \Stripe\StripeObject|null $shipping
  * @property string $status
  * @property string $type
  *
@@ -42,7 +42,7 @@ class Card extends \Stripe\ApiResource
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return CardDetails The card details associated with that issuing card.
+     * @return \Stripe\Issuing\CardDetails The card details associated with that issuing card.
      */
     public function details($params = null, $opts = null)
     {

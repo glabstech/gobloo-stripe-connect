@@ -83,20 +83,26 @@ class Gobloo_Stripe_Connect_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gobloo-stripe-connect-public.js', array( 'jquery' ), $this->version, false );
+		//stripe js
+		wp_enqueue_script( $this->plugin_name.'-stripe-js', 'https://js.stripe.com/v3/', array( ), '3.0', false );
+
 
 		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Gobloo_Stripe_Connect_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Gobloo_Stripe_Connect_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gobloo-stripe-connect-public.js', array( 'jquery' ), $this->version, false );
+		 * Localized Script
+		*/
+		$mode = get_option( '_crb_stripe_live_mode' );
+        
+        if($mode){
+            $publishable_key    = get_option( '_crb_stripe_live_publishable_key' );
+        } else {
+            $publishable_key    = get_option( '_crb_stripe_dev_publishable_key' );
+        }
+		wp_localize_script( $this->plugin_name, 'gobloo',
+		[
+			'ajax_url' => admin_url( 'admin-ajax.php' ),
+			'pk' => $publishable_key
+		]);
 
 	}
 

@@ -9,7 +9,12 @@ class ComposerStaticInit61df268c795a8ecbd7dd65d68c4ad330
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Stripe\\Stripe\\' => 14,
             'Stripe\\' => 7,
+        ),
+        'G' => 
+        array (
+            'GoblooStripeConnect\\GoblooStripeConnect\\' => 40,
         ),
         'C' => 
         array (
@@ -20,9 +25,17 @@ class ComposerStaticInit61df268c795a8ecbd7dd65d68c4ad330
     );
 
     public static $prefixDirsPsr4 = array (
+        'Stripe\\Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib/Stripe',
+        ),
         'Stripe\\' => 
         array (
             0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
+        'GoblooStripeConnect\\GoblooStripeConnect\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/includes/classes',
         ),
         'Composer\\Installers\\' => 
         array (

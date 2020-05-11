@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Stripe\\Stripe\\' => array($vendorDir . '/stripe/stripe-php/lib/Stripe'),
     'Stripe\\' => array($vendorDir . '/stripe/stripe-php/lib'),
+    'GoblooStripeConnect\\GoblooStripeConnect\\' => array($baseDir . '/includes/classes'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
     'Carbon_Fields_Plugin\\' => array($baseDir . '/wp-content/plugins/carbon-fields-plugin/core'),
     'Carbon_Fields\\' => array($vendorDir . '/htmlburger/carbon-fields/core'),

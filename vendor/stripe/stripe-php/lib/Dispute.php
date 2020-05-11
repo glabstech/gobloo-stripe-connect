@@ -8,12 +8,12 @@ namespace Stripe;
  * @property string $id
  * @property string $object
  * @property int $amount
- * @property BalanceTransaction[] $balance_transactions
+ * @property \Stripe\BalanceTransaction[] $balance_transactions
  * @property string $charge
  * @property int $created
  * @property string $currency
- * @property mixed $evidence
- * @property mixed $evidence_details
+ * @property \Stripe\StripeObject $evidence
+ * @property \Stripe\StripeObject $evidence_details
  * @property bool $is_charge_refundable
  * @property bool $livemode
  * @property \Stripe\StripeObject $metadata
@@ -69,7 +69,7 @@ class Dispute extends ApiResource
      *
      * @throws \Stripe\Exception\ApiErrorException if the request fails
      *
-     * @return Dispute The closed dispute.
+     * @return \Stripe\Dispute The closed dispute.
      */
     // TODO: add $params to standardize signature
     public function close($opts = null)

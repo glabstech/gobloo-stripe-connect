@@ -1,5 +1,16 @@
 # Changelog
 
+## 7.22.0 - 2020-01-31
+* [#849](https://github.com/stripe/stripe-php/pull/849) Add new constants for `type` on `TaxId`
+* [#843](https://github.com/stripe/stripe-php/pull/843) Even more PHPDoc fixes
+* [#841](https://github.com/stripe/stripe-php/pull/841) More PHPDoc fixes
+
+## 7.21.1 - 2020-01-29
+* [#840](https://github.com/stripe/stripe-php/pull/840) Update phpdocs across multiple resources.
+
+## 7.21.0 - 2020-01-28
+* [#839](https://github.com/stripe/stripe-php/pull/839) Add support for `TYPE_ES_CIF` on `TaxId`
+
 ## 7.20.0 - 2020-01-23
 * [#836](https://github.com/stripe/stripe-php/pull/836) Add new type values for `TaxId`
 

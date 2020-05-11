@@ -30,7 +30,8 @@ class Gobloo_Stripe_Connect_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-
+		global $wp_rewrite; 
+		$wp_rewrite->flush_rules( true );
 	}
 
 }

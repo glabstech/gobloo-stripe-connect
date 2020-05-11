@@ -30,6 +30,7 @@ class TaxId extends ApiResource
     const TYPE_AU_ABN  = 'au_abn';
     const TYPE_CA_BN   = 'ca_bn';
     const TYPE_CH_VAT  = 'ch_vat';
+    const TYPE_ES_CIF  = 'es_cif';
     const TYPE_EU_VAT  = 'eu_vat';
     const TYPE_HK_BR   = 'hk_br';
     const TYPE_IN_GST  = 'in_gst';
@@ -38,6 +39,8 @@ class TaxId extends ApiResource
     const TYPE_NZ_GST  = 'nz_gst';
     const TYPE_RU_INN  = 'ru_inn';
     const TYPE_SG_UEN  = 'sg_uen';
+    const TYPE_TH_VAT  = 'th_vat';
+    const TYPE_TW_VAT  = 'tw_vat';
     const TYPE_UNKNOWN = 'unknown';
     const TYPE_ZA_VAT  = 'za_vat';
 

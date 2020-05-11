@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23b8e5ce3dbb6e1b84288eb1b9872049",
+    "content-hash": "0c78faf3c961ddee737d5146c403cc47",
     "packages": [
         {
             "name": "components/jquery",
@@ -50,16 +50,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0"
+                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0",
+                "url": "https://api.github.com/repos/composer/installers/zipball/7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
+                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
                 "shasum": ""
             },
             "require": {
@@ -107,6 +107,7 @@
                 "Kanboard",
                 "Lan Management System",
                 "MODX Evo",
+                "MantisBT",
                 "Mautic",
                 "Maya",
                 "OXID",
@@ -161,6 +162,7 @@
                 "shopware",
                 "silverstripe",
                 "sydes",
+                "sylius",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -168,20 +170,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2019-08-12T15:00:31+00:00"
+            "time": "2020-02-07T10:39:20+00:00"
         },
         {
             "name": "htmlburger/carbon-fields",
-            "version": "v3.1.13",
+            "version": "v3.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "7e77390b5c9aa76df9db05caa555cb9ee4d0c826"
+                "reference": "ca5d111b7f8202446619e866e04be3b0f20ef7de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/7e77390b5c9aa76df9db05caa555cb9ee4d0c826",
-                "reference": "7e77390b5c9aa76df9db05caa555cb9ee4d0c826",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/ca5d111b7f8202446619e866e04be3b0f20ef7de",
+                "reference": "ca5d111b7f8202446619e866e04be3b0f20ef7de",
                 "shasum": ""
             },
             "require": {
@@ -301,25 +303,25 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2020-01-23T14:01:49+00:00"
+            "time": "2020-02-10T13:53:53+00:00"
         },
         {
             "name": "htmlburger/carbon-fields-plugin",
-            "version": "v3.1.13",
+            "version": "v3.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields-plugin.git",
-                "reference": "817bf819127ba142abfea33083d73d28b703b294"
+                "reference": "fdc8662575f36036932038352d4b439897731ca5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields-plugin/zipball/817bf819127ba142abfea33083d73d28b703b294",
-                "reference": "817bf819127ba142abfea33083d73d28b703b294",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields-plugin/zipball/fdc8662575f36036932038352d4b439897731ca5",
+                "reference": "fdc8662575f36036932038352d4b439897731ca5",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.0",
-                "htmlburger/carbon-fields": "3.1.13",
+                "htmlburger/carbon-fields": "3.1.14",
                 "php": ">=5.3"
             },
             "type": "wordpress-plugin",
@@ -340,20 +342,20 @@
             ],
             "description": "WordPress plugin loader for Carbon Fields.",
             "homepage": "http://carbonfields.net/",
-            "time": "2020-01-23T14:15:59+00:00"
+            "time": "2020-02-10T14:05:37+00:00"
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.20.0",
+            "version": "v7.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "bc47cd4af1c0e7be6c2aaa3f9798188a0909adef"
+                "reference": "44021812c0c368ff37259f7b18155a2b3d4c15b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/bc47cd4af1c0e7be6c2aaa3f9798188a0909adef",
-                "reference": "bc47cd4af1c0e7be6c2aaa3f9798188a0909adef",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/44021812c0c368ff37259f7b18155a2b3d4c15b3",
+                "reference": "44021812c0c368ff37259f7b18155a2b3d4c15b3",
                 "shasum": ""
             },
             "require": {
@@ -397,7 +399,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2020-01-23T19:25:13+00:00"
+            "time": "2020-01-31T18:06:21+00:00"
         }
     ],
     "packages-dev": [],

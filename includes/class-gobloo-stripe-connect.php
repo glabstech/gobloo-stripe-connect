@@ -28,6 +28,7 @@
  * @author     William Donayre Jr <wdonayredroid+gobloo@gmail.com>
  */
 
+use  GoblooStripeConnect\ExpressRedirect;
 
 class Gobloo_Stripe_Connect {
 
@@ -125,9 +126,29 @@ class Gobloo_Stripe_Connect {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-gobloo-stripe-connect-public.php';
 
 		/**
-		 * The class responsible for defining custom fields
+		 * This file is responsible for defining custom fields
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/custom-fields/custom-fields.php';
+
+		/**
+		 * This file is responsible for defining shortcodes
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/shortcodes/shortcodes.php';
+
+		/**
+		 * This file is responsible for including gobloo classes
+		*/
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/classes/classes.php';
+
+		/**
+		 * This file is responsible for including endpoints
+		*/
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/endpoints/endpoints.php';
+
+		/**
+		 * This file is responsible for including ajax
+		*/
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/ajax/ajax.php';
 
 		$this->loader = new Gobloo_Stripe_Connect_Loader();
 

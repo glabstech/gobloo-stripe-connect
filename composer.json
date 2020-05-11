@@ -1,6 +1,12 @@
 {
+    "autoload": {
+        "psr-4": {
+            "Stripe\\Stripe\\": ["vendor/stripe/stripe-php/lib/Stripe"],
+            "GoblooStripeConnect\\GoblooStripeConnect\\": ["includes/classes"]
+        }
+    },
     "require": {
-        "stripe/stripe-php": "^7.5",
+        "stripe/stripe-php": "7.22",
         "components/jquery": "^3.3",
         "htmlburger/carbon-fields-plugin": "^3.1"
     }

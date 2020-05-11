@@ -20,6 +20,9 @@
  * @subpackage Gobloo_Stripe_Connect/admin
  * @author     William Donayre Jr <wdonayredroid+gobloo@gmail.com>
  */
+
+use GoblooStripeConnect\GB_Products;
+
 class Gobloo_Stripe_Connect_Admin {
 
 	/**
@@ -101,3 +104,56 @@ class Gobloo_Stripe_Connect_Admin {
 	}
 
 }
+
+
+
+function new_modify_user_table( $column ) {
+	$column['stripeConnect'] = 'Gobloo Actions';
+
+    return $column;
+}
+add_filter( 'manage_users_columns', 'new_modify_user_table' );
+
+function new_modify_user_table_row( $val, $column_name, $user_id ) {
+
+	$refRole	= carbon_get_theme_option( 'crb_new_role' );
+	$userObj 	= get_user_by('id',$user_id);
+	$account_id = get_user_meta($user_id,'stripe_account_id',true);
+
+	//echo '<script>console.log("'.$val.'","'.$column_name.'");</script>';
+    switch ($column_name) {
+		case 'stripeConnect' :
+			$qoutePage 	= carbon_get_theme_option( 'crb_qoute_page' );
+			if(in_array($refRole,$userObj->roles)){
+				if(!empty($qoutePage)) $qoutePage = reset($qoutePage)['id'];
+
+				$availableProducts = GB_Products::Products($user_id);
+
+				$defaultProduct = [
+					'prefix'  => get_option( '_crb_plan_prefix' ),
+					'price' => get_option( '_crb_global_monthly' ),
+					'label' => get_option( '_crb_plan_name' )
+				];
+				$ret = '<select class="gobloo-admin-selector"><option selected>Choose Action</option><option data-product="'.$defaultProduct['prefix'].'" data-href="'.get_permalink($qoutePage).'?id='.$user_id.'&pid='.$defaultProduct['prefix'].'" >Open Quote: '.$defaultProduct['label'].'</option>';
+				//<a target="_blank" href="'.get_permalink($qoutePage).'/?id='.$user_id.'">Open Qoute Page</a>
+				foreach($availableProducts as $key => $product){
+					$ret = $ret.'<option value="'.$product['prefix'].'" data-href="'.get_permalink($qoutePage).'?id='.$user_id.'&pid='.$product['prefix'].'" >Open Quote: '.$product['name'].'</option>';
+				}
+				$ret = $ret. '<option disabled>------</option><option value="access-stripe" data-href="'.get_site_url().'/scapi?state=accountlink&aid='.$account_id.'">Access Billing</option>';
+				return $ret.'</select><a target="_blank" href="" class="hidden-qoute-link" style="display:none;"></a>';
+			} else {
+				return 'N/A';
+			}
+			break;
+
+		// case 'stripeAccountLink' :
+		// 	if(in_array($refRole,$userObj->roles)){
+		// 		return '<a target="_blank" href="'.get_site_url().'/scapi?state=accountlink&aid='.$account_id.'">Access</a>';	
+		// 	}
+		// 	break;
+		default:
+
+    }
+    return $val;
+}
+add_filter( 'manage_users_custom_column', 'new_modify_user_table_row', 10, 3 );
